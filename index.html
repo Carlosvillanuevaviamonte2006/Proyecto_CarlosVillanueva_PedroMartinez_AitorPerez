@@ -15,32 +15,32 @@
     <script defer src="assets/app.js">
     </script>
   </head>
-  <body data-spa="false" class="d-flex flex-column min-vh-100">
+  <body data-spa="true" class="d-flex flex-column min-vh-100">
     <a class="skip" href="#contenido">Saltar al contenido</a>
     <nav class="navbar navbar-expand-md py-3" aria-label="Navegación principal">
       <div class="container contenedor-amarillo">
-        <a class="brand" href="index.html" data-route="inicio">la vida<span>,</span> despacio<span> ✳</span></a>
+        <a class="brand" href="#inicio" data-route="inicio">la vida<span>,</span> despacio<span> ✳</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="menu">
           <ul class="navbar-nav ms-auto gap-md-3">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html" data-route="inicio" aria-current="page">Inicio</a>
+              <a class="nav-link active" href="#inicio" data-route="inicio" aria-current="page">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="events.html" data-route="actividades">Actividades</a>
+              <a class="nav-link " href="#actividades" data-route="actividades">Actividades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="contact.html" data-route="contacto">Contacto</a>
+              <a class="nav-link " href="#contacto" data-route="contacto">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="register.html" data-route="registro">Registro</a>
+              <a class="nav-link " href="#registro" data-route="registro">Registro</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <main id="contenido" class="container contenedor-amarillo flex-grow-1" tabindex="-1">
-      <div class="view">
+      <section id="inicio" class="view" aria-label="Inicio">
         <div class="hero">
           <div class="row align-items-center gx-lg-5">
             <div class="col-md-7">
@@ -53,7 +53,7 @@
               <p class="lead mt-4">
                 Quizá el sentido de la vida no sea encontrar una gran respuesta, sino descubrir qué hace que tu día merezca la pena.
               </p>
-              <a class="btn btn-primary mt-2" href="events.html" data-route="actividades">Encuentra tu próxima pausa ↗</a>
+              <a class="btn btn-primary mt-2" href="#actividades" data-route="actividades">Encuentra tu próxima pausa ↗</a>
               <p class="note mt-4">
                 Sentir. Elegir. Estar presente.
               </p>
@@ -181,11 +181,258 @@
             </div>
           </div>
         </section>
-      </div>
+      </section>
+      <section id="actividades" class="view" hidden aria-label="Actividades">
+        <header class="section-space pb-3">
+          <p class="eyebrow">
+            COMPARTIR TAMBIÉN DA SENTIDO
+          </p>
+          <h1>
+            Los buenos momentos<br><em>se comparten.</em>
+          </h1>
+          <p class="lead mt-4">
+            Una conversación, una pregunta y tiempo para escuchar. Estas propuestas convierten la reflexión en una pequeña experiencia compartida.
+          </p>
+          <p class="note">
+            Agenda ilustrativa. Las actividades no son convocatorias reales.
+          </p>
+        </header>
+        <section class="section-space pt-4">
+          <h2 class="mb-4">
+            Nuestra próxima pausa
+          </h2>
+          <p>
+            Destaca un tipo de actividad para encontrarlo de un vistazo. Todas permanecen visibles.
+          </p>
+          <div class="d-flex flex-wrap gap-2 mb-4" aria-label="Destacar actividades por tipo">
+            <button class="btn btn-outline-dark filter active" data-filter="todos" aria-pressed="true">Todos</button><button class="btn btn-outline-dark filter" data-filter="dialogo" aria-pressed="false">Diálogo</button><button class="btn btn-outline-dark filter" data-filter="escritura" aria-pressed="false">Escritura</button><button class="btn btn-outline-dark filter" data-filter="presencia" aria-pressed="false">Presencia</button>
+          </div>
+          <p class="filter-status visually-hidden" role="status">
+          </p>
+          <div class="table-responsive">
+            <table class="table">
+              <caption>
+                Actividades ilustrativas de La vida, despacio.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">
+                    Actividad
+                  </th>
+                  <th scope="col">
+                    Fecha
+                  </th>
+                  <th scope="col">
+                    Lugar
+                  </th>
+                  <th scope="col">
+                    Tipo
+                  </th>
+                  <th scope="col">
+                    Información
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr data-tipo="dialogo" data-detalle="Imagina que no necesitas impresionar a nadie. Comparte tres cosas a las que dedicarías más tiempo y escucha sin juzgar las respuestas del grupo.">
+                  <th scope="row">
+                    Lo que de verdad importa
+                  </th>
+                  <td>
+                    12 noviembre 2026 · 17:00
+                  </td>
+                  <td>
+                    Aula de descanso
+                  </td>
+                  <td>
+                    <span class="badge text-bg-light">Dialogo</span>
+                  </td>
+                  <td>
+                    <button class="text-button event-info" type="button" aria-expanded="false">Ver detalles ↗</button>
+                  </td>
+                </tr>
+                <tr data-tipo="escritura" data-detalle="Escribe qué te preocupa hoy, qué agradeces y qué no quieres olvidar. La carta es personal: compartirla es opcional. ¿Qué te gustaría recordar dentro de un año?">
+                  <th scope="row">
+                    Una carta a tu yo del futuro
+                  </th>
+                  <td>
+                    19 noviembre 2026 · 17:00
+                  </td>
+                  <td>
+                    Aula de descanso
+                  </td>
+                  <td>
+                    <span class="badge text-bg-light">Escritura</span>
+                  </td>
+                  <td>
+                    <button class="text-button event-info" type="button" aria-expanded="false">Ver detalles ↗</button>
+                  </td>
+                </tr>
+                <tr data-tipo="presencia" data-detalle="Un paseo sin mirar el móvil. Observa cinco cosas que normalmente te pasan desapercibidas. Después piensa si necesitas hacer más cosas o estar más presente en las que ya haces.">
+                  <th scope="row">
+                    Caminar sin llegar a ningún sitio
+                  </th>
+                  <td>
+                    26 noviembre 2026 · 16:30
+                  </td>
+                  <td>
+                    Patio del instituto
+                  </td>
+                  <td>
+                    <span class="badge text-bg-light">Presencia</span>
+                  </td>
+                  <td>
+                    <button class="text-button event-info" type="button" aria-expanded="false">Ver detalles ↗</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <aside class="pause mt-4">
+            <h2>
+              No necesitas tener todas las respuestas.
+            </h2>
+            <p class="mb-0">
+              A veces basta con encontrar a alguien con quien compartir las preguntas.
+            </p>
+          </aside>
+        </section>
+      </section>
+      <section id="contacto" class="view" hidden aria-label="Contacto">
+        <section class="section-space">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <p class="eyebrow">
+                TE LEEMOS
+              </p>
+              <h1 style="font-size:clamp(3rem,5vw,4.7rem)">
+                Toda conversación empieza por un hola.
+              </h1>
+              <p class="lead mt-4">
+                ¿Una idea, una experiencia o una pregunta? Este espacio también se construye con lo que tú quieras compartir.
+              </p>
+              <div class="intro-line mt-5">
+                La vida tiene más sentido cuando la compartimos.
+              </div>
+              <p class="note mt-4">
+                El envío se simula en tu navegador. No se guardan datos ni se envían mensajes.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form class="form-panel" data-form="contacto">
+                <h2 class="mb-4">
+                  Cuéntanos
+                </h2>
+                <div class="mb-3">
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" name="nombre" autocomplete="given-name" required minlength="2" maxlength="80">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="email">Correo electrónico</label>
+                  <input class="form-control" id="email" name="email" type="email" autocomplete="email" required maxlength="150">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="asunto">Asunto</label>
+                  <select class="form-select" id="asunto" name="asunto" required>
+                    <option value="">
+                      Selecciona un asunto
+                    </option>
+                    <option>
+                      Proponer una actividad
+                    </option>
+                    <option>
+                      Compartir una reflexión
+                    </option>
+                    <option>
+                      Otra pregunta
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="mensaje">Tu mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="1500" required></textarea>
+                  <div class="form-text">
+                    Escribe al menos 10 caracteres.
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar mensaje ↗</button>
+                <div class="form-message mt-3" role="status" aria-live="polite">
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="registro" class="view" hidden aria-label="Registro">
+        <section class="section-space">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <p class="eyebrow">
+                SÚMATE A LA INICIATIVA
+              </p>
+              <h1 style="font-size:clamp(3rem,5vw,4.7rem)">
+                Haz sitio a nuevas historias.
+              </h1>
+              <p class="lead mt-4">
+                Participar es dar el primer paso: conoce personas, comparte preguntas y descubre otras formas de mirar la vida.
+              </p>
+              <div class="intro-line mt-5">
+                La vida tiene más sentido cuando la compartimos.
+              </div>
+              <p class="note mt-4">
+                El envío se simula en tu navegador. No se guardan datos ni se envían mensajes.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form class="form-panel" data-form="registro">
+                <h2 class="mb-4">
+                  Tu próxima historia
+                </h2>
+                <div class="mb-3">
+                  <label class="form-label" for="registro-nombre">Nombre</label>
+                  <input class="form-control" id="registro-nombre" name="nombre" autocomplete="given-name" required minlength="2" maxlength="80">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="registro-email">Correo electrónico</label>
+                  <input class="form-control" id="registro-email" name="email" type="email" autocomplete="email" required maxlength="150">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="interes">¿Qué te interesa?</label>
+                  <select class="form-select" id="interes" name="interes" required>
+                    <option value="">
+                      Elige una actividad
+                    </option>
+                    <option>
+                      Diálogo
+                    </option>
+                    <option>
+                      Escritura
+                    </option>
+                    <option>
+                      Presencia
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="pregunta">Una pregunta que te acompaña (opcional)</label>
+                  <input class="form-control" id="pregunta" name="pregunta" maxlength="120">
+                </div>
+                <div class="form-check mb-4">
+                  <input class="form-check-input" type="checkbox" id="acepto" name="acepto" required>
+                  <label class="form-check-label" for="acepto">Entiendo que este registro es una simulación.</label>
+                </div>
+                <button class="btn btn-primary" type="submit">Quiero participar ↗</button>
+                <div class="form-message mt-3" role="status" aria-live="polite">
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
     <footer>
       <div class="container contenedor-amarillo d-flex justify-content-between flex-wrap gap-2">
-        <span class="brand fs-5">la vida, despacio ✳</span><span>Un proyecto para sentir, pensar y compartir · Multipágina</span><span>Hecho con calma. 2026</span>
+        <span class="brand fs-5">la vida, despacio ✳</span><span>Un proyecto para sentir, pensar y compartir · SPA</span><span>Hecho con calma. 2026</span>
       </div>
     </footer>
   </body>
