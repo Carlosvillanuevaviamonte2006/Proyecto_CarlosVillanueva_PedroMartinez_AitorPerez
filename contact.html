@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Reflexiones, encuentros y pequeñas pausas para explorar la felicidad y el sentido de la vida.">
+    <title>
+      Contacto · La vida, despacio
+    </title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script defer src="assets/bootstrap.bundle.min.js">
+    </script>
+    <script defer src="assets/app.js">
+    </script>
+  </head>
+  <body data-spa="false" class="d-flex flex-column min-vh-100">
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <nav class="navbar navbar-expand-md py-3" aria-label="Navegación principal">
+      <div class="container contenedor-amarillo">
+        <a class="brand" href="index.html" data-route="inicio">la vida<span>,</span> despacio<span> ✳</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-md-3">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html" data-route="inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="events.html" data-route="actividades">Actividades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html" data-route="contacto" aria-current="page">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="register.html" data-route="registro">Registro</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main id="contenido" class="container contenedor-amarillo flex-grow-1" tabindex="-1">
+      <div class="view">
+        <section class="section-space">
+          <div class="row g-5">
+            <div class="col-lg-6">
+              <p class="eyebrow">
+                TE LEEMOS
+              </p>
+              <h1 style="font-size:clamp(3rem,5vw,4.7rem)">
+                Toda conversación empieza por un hola.
+              </h1>
+              <p class="lead mt-4">
+                ¿Una idea, una experiencia o una pregunta? Este espacio también se construye con lo que tú quieras compartir.
+              </p>
+              <div class="intro-line mt-5">
+                La vida tiene más sentido cuando la compartimos.
+              </div>
+              <p class="note mt-4">
+                El envío se simula en tu navegador. No se guardan datos ni se envían mensajes.
+              </p>
+            </div>
+            <div class="col-lg-6">
+              <form class="form-panel" data-form="contacto">
+                <h2 class="mb-4">
+                  Cuéntanos
+                </h2>
+                <div class="mb-3">
+                  <label class="form-label" for="nombre">Nombre</label>
+                  <input class="form-control" id="nombre" name="nombre" autocomplete="given-name" required minlength="2" maxlength="80">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="email">Correo electrónico</label>
+                  <input class="form-control" id="email" name="email" type="email" autocomplete="email" required maxlength="150">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="asunto">Asunto</label>
+                  <select class="form-select" id="asunto" name="asunto" required>
+                    <option value="">
+                      Selecciona un asunto
+                    </option>
+                    <option>
+                      Proponer una actividad
+                    </option>
+                    <option>
+                      Compartir una reflexión
+                    </option>
+                    <option>
+                      Otra pregunta
+                    </option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="mensaje">Tu mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="4" minlength="10" maxlength="1500" required></textarea>
+                  <div class="form-text">
+                    Escribe al menos 10 caracteres.
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar mensaje ↗</button>
+                <div class="form-message mt-3" role="status" aria-live="polite">
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container contenedor-amarillo d-flex justify-content-between flex-wrap gap-2">
+        <span class="brand fs-5">la vida, despacio ✳</span><span>Un proyecto para sentir, pensar y compartir · Multipágina</span><span>Hecho con calma. 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>
